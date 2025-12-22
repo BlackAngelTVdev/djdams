@@ -104,12 +104,17 @@ filterSelect.addEventListener('change', (e) => {
 fetch('./media/data/gallery.csv')
   .then(res => res.text())
   .then(text => {
+    // 1. Transformation du texte en tableau d'objets
     allGalleryItems = text.trim().split('\n').slice(1).map(row => {
       const [type, ...rest] = row.split(',');
       const src = rest.join(',');
       return { type, src, alt: '' };
     });
 
+    // 2. INVERSION DE L'ORDRE ICI
+    allGalleryItems.reverse(); 
+
+    // 3. Application du filtre initial
     applyFilter('all');
 
     loadMoreBtn.addEventListener('click', displayNextBatch);
