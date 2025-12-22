@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DJ Dam's - Événements enflammés</title>
+  <link rel="shortcut icon" href="./media/img/logo.png" type="png">
+  <link rel="stylesheet" href="./media/css/acceuil.css" />
+</head>
+<body>
+  <header>
+    <div class="containerh">
+      <div class="logo">
+        <img src="./media/img/logo.png" alt="Logo">
+        <h1>DJ Dam's</h1>
+      </div>
+      <nav>
+        <a href="#about" lass="scroll-link">À propos</a>
+        <a href="#services" lass="scroll-link">Services</a>
+        <a href="#gallery" lass="scroll-link">Medias</a>
+        <a href="#contact" lass="scroll-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Ambiance garantie pour toutes vos soirées</h2>
+        <a href="#contact" class="scroll-link btn">Réserve ta date</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="apropos">
+        <h3>À propos de moi</h3>
+        <p>Salut, moi c’est Damien, jeune DJ passionné de 16 ans. Depuis plusieurs années déjà, je vis au rythme de la musique électro, des platines et des beats qui font vibrer. Ce n’est pas juste une passion, c’est une vraie vocation.</p>
+        <p>J’ai découvert l’univers du DJing très tôt, et depuis, je n’ai cessé de me former, de mixer, d’explorer différents styles et de créer des sets uniques. J’adore transmettre de l’émotion, faire bouger les gens et transformer une soirée en moment inoubliable.</p>
+        <p>Mon objectif ? <b>faire kiffer le public</b>, faire monter l’ambiance, et toujours repousser mes limites. Je suis jeune, motivé, curieux et surtout prêt à faire ma place dans ce milieu qui me fait rêver depuis longtemps.</p>
+        <p>Tu cherches un DJ motivé, créatif, et prêt à enflammer ton événement ? <br>
+        <b>Je suis là pour ça.</b></p>
+      </div>
+      <img src="./media/img/logo.png" alt="moi">
+    </section>
+
+
+    <section id="services" class="section services-section">
+      <div class="container">
+        <h3>Mes services</h3>
+        <div class="cards">
+          <div class="card">
+            <div class="icon">🎧</div>
+            <h4>Bal</h4>
+            <div class="info">
+              Ambiance garantie pour tous les âges ! Playlist sur mesure, enchaînements fluides et moments mémorables jusqu’au bout de la nuit.
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon">🎉</div>
+            <h4>Anniversaire</h4>
+            <div class="info">
+              Une ambiance festive pour célébrer comme il se doit ! Animations, musique personnalisée, et souvenirs inoubliables au rendez-vous.
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon">🏠</div>
+            <h4>Soirée privée</h4>
+            <div class="info">
+              Que ce soit dans un salon ou un jardin, je transforme ton espace en véritable dancefloor. Ambiance sur-mesure garantie !
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="gallery-section container" id="gallery">
+      <h3>Médiathèques</h3>
+      <div style="text-align:center; margin-bottom:20px;">
+  <select id="filter-select" style="padding: 10px 20px; border-radius: 20px; font-weight: bold; font-size: 1em; cursor: pointer;">
+    <option value="all">Tout</option>
+    <option value="img">Images</option>
+    <option value="iframe">Videos / sons</option>
+  </select>
+</div>
+
+
+      <div id="gallery-container" class="gallery-grid"></div>
+      <button id="load-more-btn">Afficher les Medias</button>
+      
+    </section>
+
+
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h3>Contact</h3>
+        
+        <form action="https://formsubmit.co/dj.dams08@gmail.com" method="POST">
+          <div class="form-group">
+            <label for="name">Nom complet *</label>
+            <input type="text" name="name" id="name" required placeholder="Ton nom complet">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" name="email" required placeholder="Email">
+          </div>
+          
+          <div class="form-group">
+            <label for="event-date">Date de l'événement *</label>
+            <input type="date" name="event_date" id="event-date" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="location">Lieu de l'événement *</label>
+            <input type="text" name="location" id="location" required placeholder="Lieu de l'événement">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea name="message" id="message" required placeholder="Détails de l'événement. (ex : Mariage, environ 100 personnes)"></textarea>
+          </div>
+          <!-- <input type="hidden" name="_autoresponse" value="your custom message"> -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://dj-dams.vercel.app/pages/merci.html">
+        
+          <button type="submit">Envoyer</button>
+        </form>
+        
+        
+      </div>
+    </section>
+
+  </main>
+  <!------------------ Cookie ------------------>
+
+      
+<button title="Gerer les cookies" id="manage-cookies-fixed-btn"><img src="https://www.freeiconspng.com/uploads/cookie-png-transparent-images-background-23.png" alt="cookie" width="50" height="50"></button>
+
+  <div id="cookie-banner" style="display:none;">
+  <div class="cookie-content">
+    <div class="cookietitle">
+      <img src="https://www.freeiconspng.com/uploads/cookie-png-transparent-images-background-23.png" alt="cookie" width="50" height="50">
+      <h2>Cookie</h2>
+
+    </div>
+    
+    <p>Nous utilisons des cookies pour améliorer ton expérience. En continuant, tu acceptes notre utilisation des cookies.</p>
+    <div class="buttonmesage">
+    <button id="accept-cookies-btn">J'accepte</button>
+    <button id="manage-cookies-btn">Gérer les cookies</button>
+  </div>
+    
+  </div>
+</div>
+
+<!-- Popup Gestion Cookies -->
+<div id="cookie-manager" style="display:none;">
+  <div class="cookie-manager-content">
+    
+    <form id="cookie-form">
+      <label><input type="checkbox" name="necessary" checked disabled> Cookies nécessaires (toujours actifs)</label>
+      <p>Indispensables au fonctionnement du site, ils assurent la sécurité et les fonctionnalités de base. Pas de collecte pour de la pub ou analyse.</p>
+      <hr>
+      <label><input type="checkbox" name="analytics"> Cookies analytics</label>
+      <p>Ils analysent ton usage du site pour améliorer l’expérience. Données anonymes uniquement.</p>
+      <hr>
+      <label><input type="checkbox" name="marketing"> Cookies marketing</label>
+      <p>Utilisés pour afficher des pubs ciblées et adaptées à tes centres d’intérêt.</p>
+      
+      <div class="buttons">
+        <button type="submit">Valider</button>
+        <button type="button" id="close-manager-btn">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 DJ Dam's. Tous droits réservés.</p>
+    </div>
+  </footer>
+  <script src="./media/js/scroll.js"></script>
+  <script src="./media/js/gallery.js"></script>
+  <script src="./media/js/cookie.js"></script>
+
+</body>
+</html>
