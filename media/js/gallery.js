@@ -45,6 +45,10 @@ function createElement(type, src, alt) {
     img.src = src;
     img.alt = alt || '';
     img.style.cursor = 'pointer';
+    
+
+    img.setAttribute('loading', 'lazy'); 
+
 
     img.addEventListener('click', () => {
       lightboxImg.src = src;
@@ -55,6 +59,14 @@ function createElement(type, src, alt) {
   } else if (type === 'iframe') {
     const wrapper = document.createElement('div');
     wrapper.innerHTML = src;
+
+
+    const iframeInside = wrapper.querySelector('iframe');
+    if (iframeInside) {
+      iframeInside.setAttribute('loading', 'lazy');
+    }
+    // ---------------------------------------
+    
     return wrapper;
   }
   return null;
