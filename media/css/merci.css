@@ -1,0 +1,99 @@
+:root {
+  --bg-main: #0e1015;
+  --bg-card: #161a23;
+  --text-main: #f4f6fb;
+  --text-soft: #c9cfde;
+  --line: rgba(255, 255, 255, 0.14);
+  --brand: #8c1998;
+  --brand-2: #c43be2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-main);
+  background:
+    radial-gradient(900px 420px at 85% -10%, rgba(140, 25, 152, 0.24), transparent 60%),
+    radial-gradient(700px 380px at -10% 90%, rgba(196, 59, 226, 0.14), transparent 62%),
+    linear-gradient(160deg, #0b0e13, #121722 50%, #0e121a);
+}
+
+.thankyou-wrapper {
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+}
+
+.thankyou-card {
+  width: min(760px, 100%);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(170deg, rgba(22, 26, 35, 0.95), rgba(19, 23, 31, 0.95));
+  padding: clamp(24px, 4vw, 44px);
+  text-align: center;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  color: #ffffff;
+}
+
+p {
+  margin: 14px auto 0;
+  max-width: 540px;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.thankyou-actions {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(120deg, var(--brand), var(--brand-2));
+  box-shadow: 0 8px 18px rgba(140, 25, 152, 0.35);
+}
+
+.btn-secondary {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+a:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 520px) {
+  .thankyou-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  a {
+    text-align: center;
+  }
+}

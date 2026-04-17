@@ -4,70 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ Dam's - Merci</title>
-    <link rel="shortcut icon" href="./media/img/logo.png" type="png">
-    <style>
-        /* Global (copié de ta base) */
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: #fff;
-  background: #111;
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centrer verticalement */
-  align-items: center;     /* Centrer horizontalement */
-  text-align: center;
-  scroll-behavior: smooth;
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: #8c1998;
-  margin-bottom: 40px;
-  text-shadow: 1px 0 9px #000000;
-  max-width: 90%;
-}
-
-/* Lien de retour */
-a {
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(135deg, #8c1998, #ff0055);
-  padding: 14px 28px;
-  border-radius: 30px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-  transition: transform 0.2s, 0.3s;
-  display: inline-block;
-  user-select: none;
-}
-
-a:hover {
-    transform: scale(1.05);
-
-}
-
-/* Responsive simple */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  a {
-    padding: 12px 24px;
-    font-size: 0.9rem;
-  }
-}
-
-    </style>
+    <link rel="shortcut icon" href="../media/img/logo.png" type="png">
+    <link rel="stylesheet" href="../media/css/merci.css">
 </head>
 <body>
-    <h1>Merci, regardez vos emails régulièrement pour le suivi !</h1>
-    <a href="../index.html">Acceuil</a>
+    <main class="thankyou-wrapper">
+        <div class="thankyou-card">
+            <h1>Merci, ta demande est bien envoyée.</h1>
+            <p>Regarde tes emails régulièrement pour le suivi.</p>
+
+            <div class="thankyou-actions">
+                <a href="../index.html" class="btn-primary">Retour à l'accueil</a>
+                <a href="./legal.html#confidentialite" class="btn-secondary">Confidentialité</a>
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>
