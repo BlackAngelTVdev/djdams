@@ -109,6 +109,37 @@ nav {
   gap: 12px;
 }
 
+.menu-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 5px auto;
+  border-radius: 999px;
+  background: #fff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-toggle:hover {
+  transform: none;
+  filter: none;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
 nav a {
   text-decoration: none;
   font-weight: 700;
@@ -153,6 +184,23 @@ nav a:hover {
   color: #d6dceb;
   font-size: clamp(1rem, 1.8vw, 1.15rem);
   line-height: 1.65;
+}
+
+.teaser-cta {
+  margin-top: 12px;
+  display: inline-block;
+  color: #d88bff;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.teaser-cta:hover {
+  color: #efc3ff;
+  text-shadow: 0 0 14px rgba(216, 139, 255, 0.35);
 }
 
 .hero-actions {
@@ -528,8 +576,28 @@ footer {
   transition: color 0.2s ease;
 }
 
+.footer-cookie-btn {
+  margin-top: 2px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #c5ceda;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .footer-column a:hover {
   color: #ffffff;
+}
+
+.footer-cookie-btn:hover {
+  color: #ffffff;
+  transform: none;
+  filter: none;
 }
 
 .social-link {
@@ -576,36 +644,52 @@ footer {
 
 #cookie-banner {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  right: 16px;
+  bottom: 16px;
   z-index: 9999;
-  background: rgba(7, 9, 13, 0.96);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 16px;
+  width: min(420px, calc(100vw - 24px));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  background: rgba(7, 9, 13, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+  padding: 14px;
 }
 
 .cookie-content {
-  width: min(920px, 96%);
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 
 .cookietitle {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.cookietitle img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.85;
+}
+
+.cookietitle h2 {
+  margin: 0;
+  font-size: 1rem;
 }
 
 #cookie-banner p {
-  margin: 10px 0 12px;
-  color: #e8e8e8;
-  text-align: center;
+  margin: 8px 0 12px;
+  color: #d4dce9;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 0.92rem;
 }
 
 .buttonmesage {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -613,11 +697,18 @@ footer {
 #cookie-banner button,
 #manage-cookies-btn {
   width: auto;
-  min-width: 180px;
-  padding: 10px 16px;
-  color: #121212;
-  background: #fff;
+  min-width: 145px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  color: #f2f5fa;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   box-shadow: none;
+}
+
+#accept-cookies-btn {
+  background: linear-gradient(110deg, var(--brand), var(--brand-2));
+  border-color: transparent;
 }
 
 #cookie-manager {
@@ -665,26 +756,6 @@ footer {
   width: 100%;
 }
 
-#manage-cookies-fixed-btn {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 9999;
-  display: none;
-  width: 64px;
-  height: 64px;
-  padding: 0;
-  border-radius: 50%;
-  border: 0;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  background: transparent;
-}
-
-#manage-cookies-fixed-btn img {
-  width: 64px;
-  height: 64px;
-}
-
 @media (max-width: 1024px) {
   #about.section {
     grid-template-columns: 1fr;
@@ -703,21 +774,82 @@ footer {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 120px;
+    --header-height: 84px;
   }
 
   .containerh {
-    justify-content: center;
-    text-align: center;
+    justify-content: space-between;
+    text-align: left;
+    flex-wrap: nowrap;
+    min-height: var(--header-height);
+    padding: 10px 0;
+  }
+
+  .logo {
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+    z-index: 1002;
   }
 
   nav {
-    justify-content: center;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    display: grid;
+    gap: 8px;
+    padding: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(9, 11, 14, 0.96);
+    backdrop-filter: blur(8px);
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.24s ease, opacity 0.24s ease;
+    z-index: 1001;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 12px 14px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  body.nav-open nav {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  body.nav-open .menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  body.nav-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  body.nav-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .hero {
     min-height: 72vh;
-    padding: 80px 14px 84px;
+    padding: 70px 14px 80px;
   }
 
   .section,
@@ -744,23 +876,26 @@ footer {
   }
 
   #cookie-banner {
-    padding-bottom: 20px;
+    right: 12px;
+    bottom: 12px;
+    width: min(420px, calc(100vw - 24px));
+    padding: 12px;
   }
 }
 
 @media (max-width: 520px) {
   :root {
-    --header-height: 138px;
+    --header-height: 78px;
   }
 
   .logo {
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    justify-content: flex-start;
   }
 
-  nav a {
-    width: 100%;
-    text-align: center;
+  .logo img {
+    width: 44px;
+    height: 44px;
   }
 
   .hero h2 {
@@ -769,6 +904,16 @@ footer {
 
   #cookie-manager {
     padding: 18px;
+  }
+
+  .buttonmesage {
+    width: 100%;
+  }
+
+  #cookie-banner button,
+  #manage-cookies-btn {
+    width: 100%;
+    min-width: 0;
   }
 
   #cookie-manager .buttons {
