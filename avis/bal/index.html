@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Redirection vers le formulaire</title>
+	<link rel="stylesheet" href="../../media/css/merci.css" />
+	<style>
+		.thankyou-actions button {
+			text-decoration: none;
+			display: inline-block;
+			padding: 12px 20px;
+			border-radius: 999px;
+			font-weight: 700;
+			font-family: inherit;
+			font-size: 1rem;
+			border: none;
+			transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+		}
+
+		.thankyou-actions button:hover {
+			transform: translateY(-1px);
+		}
+
+		.btn-secondary[hidden] {
+			display: none;
+		}
+
+		#auto-redirect-btn {
+			cursor: default;
+		}
+
+		#auto-redirect-btn:disabled {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<main class="thankyou-wrapper">
+		<section class="thankyou-card" aria-live="polite">
+		<h1>Laissez votre avis</h1>
+		<p id="status">Redirection automatique vers le formulaire dans 5s...</p>
+
+		<div class="thankyou-actions">
+			<button id="auto-redirect-btn" class="btn-primary" type="button" disabled>
+				Vous serez redirigé dans 5s sur le formulaire
+			</button>
+			<button id="redirectNow" class="btn-secondary" type="button" hidden>
+				Je n'ai pas été rediriger
+			</button>
+		</div>
+		</section>
+	</main>
+
+	<script>
+		const formUrl = "https://forms.gle/oqRPxETBhMMDmZZS7";
+		const countdownButton = document.getElementById("auto-redirect-btn");
+		const fallbackButton = document.getElementById("redirectNow");
+		const status = document.getElementById("status");
+
+		function goToForm() {
+			window.location.href = formUrl;
+		}
+
+		let secondsLeft = 5;
+		countdownButton.textContent = `Vous serez redirigé dans ${secondsLeft}s sur le formulaire`;
+
+		const countdownId = setInterval(() => {
+			secondsLeft -= 1;
+			if (secondsLeft > 0) {
+				status.textContent = `Redirection automatique vers le formulaire dans ${secondsLeft}s...`;
+				countdownButton.textContent = `Vous serez redirigé dans ${secondsLeft}s sur le formulaire`;
+			}
+		}, 1000);
+
+		setTimeout(() => {
+			clearInterval(countdownId);
+			status.textContent = "Tentative de redirection en cours...";
+			fallbackButton.hidden = false;
+			goToForm();
+		}, 5000);
+
+		fallbackButton.addEventListener("click", goToForm);
+	</script>
+</body>
+</html>
