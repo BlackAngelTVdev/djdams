@@ -1,6 +1,6 @@
 let allGalleryItems = [];
 let currentIndex = 0;
-const batchSize = 10;
+const batchSize = 9;
 let currentFilter = 'all';
 
 const loadMoreBtn = document.getElementById('load-more-btn');
