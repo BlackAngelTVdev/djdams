@@ -129,7 +129,7 @@
       <div class="container">
         <h3>Contact</h3>
 
-        <form action="https://formsubmit.co/dj.dams08@gmail.com" method="POST">
+        <form id="contact-form" action="https://formsubmit.co/dj.dams08@gmail.com" method="POST">
           <div class="form-group">
             <label for="name">Nom complet *</label>
             <input type="text" name="name" id="name" required placeholder="Ton nom complet">
@@ -140,9 +140,23 @@
             <input type="email" name="email" required placeholder="Email">
           </div>
 
-          <div class="form-group">
+          <div class="form-group" style="position:relative;">
             <label for="event-date">Date de l'événement *</label>
-            <input type="date" name="event_date" id="event-date" required>
+            <input type="hidden" name="event_date" id="event-date" required>
+            <div id="date-display" class="date-display" role="button" tabindex="0" aria-label="Choisir une date">Choisir une date</div>
+            <div id="calendar-popup" class="calendar-popup">
+              <div class="cal-header">
+                <button type="button" id="cal-prev">◀</button>
+                <span id="calendar-month-year"></span>
+                <button type="button" id="cal-next">▶</button>
+              </div>
+              <div id="calendar-days" class="cal-grid"></div>
+              <div class="cal-legend">
+                <span><span class="dot free"></span> Libre</span>
+                <span><span class="dot busy-dot"></span> Occupé</span>
+                <span><span class="dot reserved-dot"></span> Réservé</span>
+              </div>
+            </div>
           </div>
 
           <div class="form-group">
@@ -259,6 +273,7 @@
   <script src="./media/js/gallery.js"></script>
   <script src="./media/js/reviews.js"></script>
   <script src="./media/js/cookie.js"></script>
+  <script src="./media/js/calendar.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
