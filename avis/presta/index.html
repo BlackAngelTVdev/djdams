@@ -3,9 +3,10 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Redirection vers le formulaire</title>
+	<title>DJ Dam's - Laissez votre avis sur la prestation</title>
+	<meta name="description" content="Vous avez fait appel à DJ Dam's pour votre événement ? Prenez 2 minutes pour laisser un avis, ça aide d'autres personnes à choisir leur DJ." />
+	<link rel="shortcut icon" href="../../media/img/logo.png" type="png">
 	<link rel="stylesheet" href="../../media/css/merci.css" />
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3938320450612017" crossorigin="anonymous"></script>
 	<style>
 		.thankyou-actions button {
 			text-decoration: none;
@@ -39,22 +40,41 @@
 <body>
 	<main class="thankyou-wrapper">
 		<section class="thankyou-card" aria-live="polite">
-		<h1>Laissez votre avis</h1>
-		<p id="status">Redirection automatique vers le formulaire dans 5s...</p>
+			<h1>Votre avis sur la prestation</h1>
 
-		<div class="thankyou-actions">
-			<button id="auto-redirect-btn" class="btn-primary" type="button" disabled>
-				Vous serez redirigé dans 5s sur le formulaire
-			</button>
-			<button id="redirectNow" class="btn-secondary" type="button" hidden>
-				Je n'ai pas été rediriger
-			</button>
-		</div>
+			<p class="page-lead">Votre soirée est passée et tout s'est bien déroulé ? Votre avis compte vraiment. Prenez
+				deux minutes : il aide d'autres personnes à choisir leur DJ en confiance.</p>
+
+			<ul class="page-steps">
+				<li><strong>Le formulaire prend 2 minutes</strong> : une note, quelques mots sur l'ambiance et le son.</li>
+				<li><strong>Votre avis est publié sur le site</strong>, dans la rubrique des retours clients.</li>
+				<li><strong>Aucune inscription</strong> n'est nécessaire, et rien n'est partagé en dehors du site.</li>
+			</ul>
+
+			<hr class="page-divider">
+
+			<p>Vous hésitez encore ? Retrouvez les <a href="../../pages/tarifs.html" class="text-link">tarifs</a> et la
+				<a href="../../index.html#gallery" class="text-link">médiathèque</a> pour revoir l'ambiance des soirées.</p>
+
+			<p id="status">Redirection automatique vers le formulaire dans 5s...</p>
+
+			<div class="thankyou-actions">
+				<button id="auto-redirect-btn" class="btn-primary" type="button" disabled>
+					Vous serez redirigé dans 5s sur le formulaire
+				</button>
+				<button id="redirectNow" class="btn-secondary" type="button" hidden>
+					Je n'ai pas été redirigé
+				</button>
+			</div>
+
+			<div class="thankyou-actions">
+				<a href="../../index.html" class="btn-secondary">Retour au site</a>
+			</div>
 		</section>
 	</main>
 
 	<script>
-		const formUrl = "https://forms.gle/Xnth6tEePbytvoiz7"; // Remplace ce lien pour la version presta.
+		const formUrl = "https://forms.gle/Xnth6tEePbytvoiz7";
 		const countdownButton = document.getElementById("auto-redirect-btn");
 		const fallbackButton = document.getElementById("redirectNow");
 		const status = document.getElementById("status");
