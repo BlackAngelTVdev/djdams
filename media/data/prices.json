@@ -31,7 +31,7 @@
         },
         {
           "name": "Gros projets",
-          "price": "400",
+          "price": "500",
           "currency": "CHF",
           "unit": "la prestation",
           "imageAlt": "Grande soirée avec DJ Dam's",
@@ -67,7 +67,7 @@
       { "label": "Micro pour les annonces", "values": [true, true, true] },
       { "label": "Playlist préparée avec toi", "values": [true, true, true] },
       { "label": "Son", "values": ["Sans caisson", "2 caissons", "3 caissons"] },
-      { "label": "Éclairages", "values": ["4 effets", "12 effets", "18 effets"] },
+      { "label": "Éclairages", "values": ["5 effets", "12 effets", "18 effets"] },
       { "label": "Déplacement maximum", "values": ["-", "20km", "10km"] },
       { "label": "Délai minimum de réservation", "values": ["14 jours", "30 jours", "45 jours"] }
     ]
