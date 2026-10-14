@@ -70,13 +70,12 @@
       { "label": "Installation", "values": [true, true, true] },
       { "label": "Micro pour les annonces", "values": [true, true, true] },
       { "label": "Playlist préparée avec vous", "values": [true, true, true] },
-      { "label": "Durée de la prestation", "values": ["2 heures", "4 heures", "6 heures"] },
-      { "label": "Animations avec les invités", "values": ["Non", "En option", "Inclus"] },
+      { "label": "Durée de la prestation", "values": ["4 heures", "6 heures", "6 heures"] },
+      { "label": "Animations avec les invités", "values": ["En option", "En option", "Inclus"] },
       { "label": "Son", "values": ["Sans caisson", "2 caissons", "3 caissons"] },
       { "label": "Éclairages", "values": ["5 effets", "12 effets", "18 effets"] },
-      { "label": "Effets spéciaux (fumée, bulles)", "values": ["-", "En option", "Inclus"] },
-      { "label": "Tables et câbles", "values": [true, true, true] },
-      { "label": "Matériel de secours", "values": ["-", "Oui", "Oui"] },
+      { "label": "Effets spéciaux (fumée)", "values": ["En option", "Inclus", "Inclus"] },
+      { "label": "changement de dernière seconde", "values": ["-", "-", "Dans la limite du possible"] },
       { "label": "Déplacement maximum", "values": ["-", "20km", "10km"] },
       { "label": "Délai minimum de réservation", "values": ["14 jours", "30 jours", "45 jours"] }
     ]
