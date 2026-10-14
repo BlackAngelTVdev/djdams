@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DJ Dam's - Contact</title>
+  <meta name="description" content="Contact DJ Dam's : dis-moi ta date et les détails de ton événement, je te réponds avec un devis." />
+  <link rel="shortcut icon" href="../media/img/logo.png" type="png">
+  <link rel="stylesheet" href="../media/css/acceuil.css" />
+  <style>
+    .contact-intro {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    .contact-alt {
+      max-width: 720px;
+      margin: 22px auto 0;
+      text-align: center;
+      color: var(--text-soft);
+      font-size: 0.97rem;
+    }
+
+    .contact-alt a {
+      color: #d88bff;
+      font-weight: 700;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3938320450612017" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="containerh">
+      <a class="logo" href="../index.html">
+        <img src="../media/img/logo.png" alt="Logo DJ Dam's">
+        <h1>DJ Dam's</h1>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="main-nav">
+        <a href="../index.html#about">À propos</a>
+        <a href="../index.html#services">Services</a>
+        <a href="./tarifs.html">Tarifs</a>
+        <a href="../index.html#gallery">Médias</a>
+        <a href="../index.html#reviews">Avis</a>
+        <a href="./contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="contact" class="section">
+      <div class="container">
+        <h3>Contact</h3>
+        <p class="contact-intro">Dis-moi la date, le lieu et combien de personnes il y aura. Comme ça je vois tout de
+          suite si je suis libre et je peux te donner un prix.</p>
+
+        <form id="contact-form" action="https://formsubmit.co/dj.dams08@gmail.com" method="POST">
+          <div class="form-group">
+            <label for="name">Nom complet *</label>
+            <input type="text" name="name" id="name" required placeholder="Ton nom complet">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" name="email" required placeholder="Email">
+          </div>
+
+          <div class="form-group" style="position:relative;">
+            <label for="event-date">Date de l'événement *</label>
+            <input type="hidden" name="event_date" id="event-date" required>
+            <div id="date-display" class="date-display" role="button" tabindex="0" aria-label="Choisir une date">Choisir une date</div>
+            <div id="calendar-popup" class="calendar-popup">
+              <div class="cal-header">
+                <button type="button" id="cal-prev">◀</button>
+                <span id="calendar-month-year"></span>
+                <button type="button" id="cal-next">▶</button>
+              </div>
+              <div id="calendar-days" class="cal-grid"></div>
+              <div class="cal-legend">
+                <span><span class="dot free"></span> Libre</span>
+                <span><span class="dot busy-dot"></span> Occupé</span>
+                <span><span class="dot reserved-dot"></span> Réservé</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Lieu de l'événement *</label>
+            <input type="text" name="location" id="location" required placeholder="Lieu de l'événement">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea name="message" id="message" required
+              placeholder="Détails de l'événement. (ex : Mariage, environ 100 personnes)"></textarea>
+          </div>
+          <!-- <input type="hidden" name="_autoresponse" value="your custom message"> -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://dj-dams.vercel.app/pages/merci.html">
+
+          <button type="submit">Envoyer</button>
+        </form>
+
+        <p class="contact-alt">Tu préfères écrire directement ? <a href="mailto:dj.dams08@gmail.com">dj.dams08@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!------------------ Cookie ------------------>
+
+  <div id="cookie-banner" style="display:none;">
+    <div class="cookie-content">
+      <div class="cookietitle">
+        <img src="https://www.freeiconspng.com/uploads/cookie-png-transparent-images-background-23.png" alt="cookie">
+        <h2>Cookie</h2>
+
+      </div>
+
+      <p>Nous utilisons des cookies pour améliorer ton expérience. En continuant, tu acceptes notre utilisation des
+        cookies.</p>
+      <div class="buttonmesage">
+        <button id="accept-cookies-btn">J'accepte</button>
+        <button id="manage-cookies-btn">Gérer les cookies</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Popup Gestion Cookies -->
+  <div id="cookie-manager" style="display:none;">
+    <div class="cookie-manager-content">
+
+      <form id="cookie-form">
+        <label><input type="checkbox" name="necessary" checked disabled> Cookies nécessaires (toujours actifs)</label>
+        <p>Indispensables au fonctionnement du site, ils assurent la sécurité et les fonctionnalités de base. Pas de
+          collecte pour de la pub ou analyse.</p>
+        <hr>
+        <label><input type="checkbox" name="analytics"> Cookies analytics</label>
+        <p>Ils analysent ton usage du site pour améliorer l’expérience. Données anonymes uniquement.</p>
+        <hr>
+        <label><input type="checkbox" name="marketing"> Cookies marketing</label>
+        <p>Utilisés pour afficher des pubs ciblées et adaptées à tes centres d’intérêt.</p>
+
+        <div class="buttons">
+          <button type="submit">Valider</button>
+          <button type="button" id="close-manager-btn">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-title">DJ Dam's</p>
+          <p class="footer-tagline">Le son qu'il faut, au bon moment, pour les événements qui comptent.</p>
+          <div class="footer-socials">
+            <a class="social-link instagram" href="https://www.instagram.com/dj_dams08/" target="_blank" rel="noopener noreferrer" aria-label="Instagram DJ Dam's">
+              <span class="social-icon" aria-hidden="true">IG</span>
+              <span>Instagram</span>
+            </a>
+            <a class="social-link youtube" href="https://www.youtube.com/@Dj-Dam-s" target="_blank" rel="noopener noreferrer" aria-label="YouTube DJ Dam's">
+              <span class="social-icon" aria-hidden="true">YT</span>
+              <span>YouTube</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <a href="../index.html#about">À propos</a>
+          <a href="../index.html#services">Services</a>
+          <a href="./tarifs.html">Tarifs</a>
+          <a href="../index.html#gallery">Médias</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <a href="./contact.html">Réserver une date</a>
+          <a href="../index.html#reviews">Avis clients</a>
+          <a href="mailto:dj.dams08@gmail.com">dj.dams08@gmail.com</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Légal</h4>
+          <a href="./legal.html#mentions-legales">Mentions légales</a>
+          <a href="./legal.html#confidentialite">Confidentialité</a>
+          <button type="button" id="manage-cookies-footer-btn" class="footer-cookie-btn">Préférences cookies</button>
+        </div>
+      </div>
+
+      <p class="footer-copy">&copy; 2025 DJ Dam's. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="../media/js/scroll.js"></script>
+  <script src="../media/js/cookie.js"></script>
+  <script src="../media/js/calendar.js"></script>
+</body>
+
+</html>
