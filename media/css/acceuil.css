@@ -493,6 +493,14 @@ button:hover {
   font-weight: 600;
 }
 
+/* "dès" devant le prix : tout petit, aligné sur la baseline du montant */
+.price-prefix {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-soft);
+  text-transform: lowercase;
+}
+
 .price-old {
   color: #9aa6b5;
   font-size: 1rem;

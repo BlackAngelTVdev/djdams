@@ -64,6 +64,11 @@ function buildPriceLine(item) {
     line.appendChild(el('span', 'price-old', formatPriceText(item.oldPrice, item.currency)));
   }
 
+  // Préfixe "dès" : prix mini, affiché en tout petit avant le montant
+  if (numeric && hasText(item.pricePrefix)) {
+    line.appendChild(el('span', 'price-prefix', String(item.pricePrefix).trim()));
+  }
+
   line.appendChild(amount);
 
   if (numeric && hasText(item.unit)) {
