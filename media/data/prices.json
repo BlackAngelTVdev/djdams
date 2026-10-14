@@ -1,0 +1,146 @@
+{
+  "page": {
+    "title": "Tarifs",
+    "subtitle": "Les prix sont écrits ici en clair, en CHF. Tu sais avant même de m'écrire ce que ça coûte, matériel et installation compris.",
+    "updated": "14 octobre 2026",
+    "actions": [
+      { "label": "Réserver ma date", "href": "./contact.html", "style": "primary" },
+      { "label": "Voir la médiathèque", "href": "../index.html#gallery", "style": "ghost" }
+    ],
+    "actionNote": "Devis gratuit, sans engagement"
+  },
+
+  "categories": [
+    {
+      "id": "forfaits",
+      "title": "Forfaits",
+      "subtitle": "De l'anniv entre copains à la grosse soirée",
+      "items": [
+        {
+          "name": "Anniversaires & petits événements",
+          "price": "150",
+          "currency": "CHF",
+          "unit": "la prestation",
+          "imageAlt": "Petite soirée animée par DJ Dam's",
+          "description": "Anniversaire, petite soirée entre amis. Le format de base, et il fait le travail.",
+          "features": [],
+          "cta": {
+            "label": "Réserver",
+            "href": "./contact.html"
+          }
+        },
+        {
+          "name": "Gros projets",
+          "price": "400",
+          "currency": "CHF",
+          "unit": "la prestation",
+          "imageAlt": "Grande soirée avec DJ Dam's",
+          "description": "Pour les soirées qui durent et où il y a du monde. Je reste plus longtemps et je pousse le son.",
+          "features": [],
+          "cta": {
+            "label": "Réserver",
+            "href": "./contact.html"
+          }
+        },
+        {
+          "name": "Très gros événements",
+          "price": "800",
+          "currency": "CHF",
+          "unit": "la prestation",
+          "duration": "Déplacement max 10 km",
+          "description": "La grosse formule avec tout le matos. Limité à 10 km, le transport est déjà costaud comme ça.",
+          "features": [],
+          "cta": {
+            "label": "Demander un devis",
+            "href": "./contact.html"
+          }
+        }
+      ]
+    }
+  ],
+
+  "comparison": {
+    "title": "Ce qui est compris, forfait par forfait",
+    "text": "Le détail de ce qui change d'un forfait à l'autre. Les ✓ sont compris dans le prix, les ✗ ne le sont pas.",
+    "rows": [
+      {"label": "installation", "values": [true,true,true]},
+      { "label": "Micro pour les annonces", "values": [true, true, true] },
+      { "label": "Playlist préparée avec toi", "values": [true, true, true] },
+      { "label": "Son", "values": ["Sans caisson", "2 caissons", "3 caissons"] },
+      { "label": "Éclairages", "values": ["4 effets", "12 effets", "18 effets"] },
+      { "label": "Déplacement maximum", "values": ["-", "20km", "10km"] },
+      { "label": "Délai minimum de réservation", "values": ["14 jours", "30 jours", "45 jours"] }
+    ]
+  },
+
+  "notes": [
+    "Prix en CHF, matériel et installation compris.",
+    "Un mois d'avance recommandé pour bloquer ta date.",
+    "Le forfait 800 CHF va jusqu'à 10 km, au-delà c'est trop de matos à trimballer.",
+    "Acompte pour bloquer la date, solde le jour J.",
+    "Tu passes par la page contact pour le devis : c'est gratuit et sans engagement."
+  ],
+
+  "faq": [
+    {
+      "question": "Pourquoi trois forfaits ?",
+      "answer": "Parce qu'une anniv avec 20 potes et un bal avec 200 personnes, c'est pas le même boulot. Le 150 CHF couvre les petits trucs, le 400 les soirées qui durent, le 800 les grosses soirées avec tout le matos — et celui-là reste limité à 10 km."
+    },
+    {
+      "question": "Le matériel est compris dans le prix ?",
+      "answer": "Oui, tout : enceintes, tables, éclairages, câbles. Tu n'as rien à acheter ni à prêter, j'arrive avec."
+    },
+    {
+      "question": "Il y a des frais cachés ?",
+      "answer": "Non. Le prix que tu vois est celui que tu payes, installation comprise. Si un truc en plus se présente, je te le dis tout de suite, pas après."
+    },
+    {
+      "question": "Comment je réserve ma date ?",
+      "answer": "Tu passes par la page contact, tu me donnes la date, le lieu et le nombre de personnes. Je te dis si la date est libre et je t'envoie le devis."
+    },
+    {
+      "question": "Combien de temps à l'avance il faut réserver ?",
+      "answer": "Un mois, c'est ce que je recommande pour tous les forfaits — le temps que je prépare la soirée et que je réserve le matos. Si c'est plus serré que ça, demande quand même, je te dis tout de suite si elle est prise."
+    },
+    {
+      "question": "Comment on paie ?",
+      "answer": "Un acompte pour bloquer la date, le reste le jour même. Le montant est écrit sur le devis, tu auras rien à rajouter après."
+    },
+    {
+      "question": "Tu joues quel style de musique ?",
+      "answer": "Ça dépend de ton public. On prépare la playlist ensemble : tu me donnes tes morceaux préférés et ceux que tu ne veux surtout pas entendre, et je gère les transitions. Ensuite je lis la piste et j'adapte au fur et à mesure."
+    },
+    {
+      "question": "Tu fais les annonces ?",
+      "answer": "Oui, avec le micro : la pièce, le discours, le gâteau, les surprises. Envoie-moi le programme de la soirée et je place tout au bon moment."
+    },
+    {
+      "question": "Et si la soirée est en extérieur ?",
+      "answer": "Ça marche, il faut juste un endroit abrité pour le matériel (tente, garage, salle) et une prise pas trop loin. On en parle quand tu fais ta demande."
+    },
+    {
+      "question": "Je suis à plus de 10 km, c'est possible ?",
+      "answer": "Oui pour les petits et moyens forfaits, on regarde selon le matos à transporter. Au-delà de 10 km, le forfait 800 CHF ne passe plus, le transport est trop lourd."
+    },
+    {
+      "question": "Combien de personnes tu gères ?",
+      "answer": "D'une soirée entre amis à une vraie grande fête. Pour les grandes salles, le forfait 800 CHF prévoit le matos qui suit."
+    },
+    {
+      "question": "Qu'est-ce que je dois prévoir de mon côté ?",
+      "answer": "Une prise électrique, un espace plat pour poser le matériel, et l'ordre de la soirée (horaires, moments importants). Le reste, c'est pour moi."
+    }
+  ],
+
+  "cta": {
+    "title": "Une date en tête ?",
+    "text": "Dis-moi la date, le lieu et combien de personnes il y aura. Je te confirme ma dispo et je t'envoie le devis, sans engagement.",
+    "button": {
+      "label": "Demander mon devis",
+      "href": "./contact.html"
+    },
+    "actions": [
+      { "label": "Voir les avis", "href": "../index.html#reviews", "style": "ghost" }
+    ]
+  }
+}
