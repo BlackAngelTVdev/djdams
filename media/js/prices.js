@@ -564,7 +564,7 @@ if (pricesRoot || homePricingRoot) {
         const box = el('div', 'prices-error');
         box.appendChild(el('p', null, 'Impossible de charger les tarifs pour le moment.'));
         box.appendChild(
-          el('p', null, 'Réessaie dans un instant ou écris-moi à dj.dams08@gmail.com pour recevoir les prix.')
+          el('p', null, 'Veuillez réessayer dans un instant ou écrivez-moi à dj.dams08@gmail.com pour recevoir les prix.')
         );
         target.appendChild(box);
       });
