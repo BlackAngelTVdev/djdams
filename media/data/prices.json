@@ -74,9 +74,8 @@
   },
 
   "notes": [
-    "Prix en CHF, matériel et installation compris.",
-    "Un mois d'avance recommandé pour bloquer ta date.",
-    "Le forfait 800 CHF va jusqu'à 10 km, au-delà c'est trop de matos à trimballer.",
+    "Prévoie un peu d'avance : le délai minimum par forfait est écrit dans le tableau comparatif.",
+    "Le forfait 800 CHF va jusqu'à 10 km, au-delà c'est trop de materielle a transporter.",
     "Acompte pour bloquer la date, solde le jour J.",
     "Tu passes par la page contact pour le devis : c'est gratuit et sans engagement."
   ],
@@ -100,7 +99,7 @@
     },
     {
       "question": "Combien de temps à l'avance il faut réserver ?",
-      "answer": "Un mois, c'est ce que je recommande pour tous les forfaits — le temps que je prépare la soirée et que je réserve le matos. Si c'est plus serré que ça, demande quand même, je te dis tout de suite si elle est prise."
+      "answer": "Ça dépend du forfait : le délai minimum est indiqué dans le tableau comparatif plus haut. En gros, plus le forfait est gros, plus il faut me prévenir tôt — le temps que je prépare la soirée et que je réserve le matos. Si c'est plus serré que ça, demande quand même, je te dis tout de suite si elle est prise."
     },
     {
       "question": "Comment on paie ?",
