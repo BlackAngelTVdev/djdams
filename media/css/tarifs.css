@@ -216,6 +216,15 @@
   line-height: 1.6;
 }
 
+/* Mention sous le prix : prix indicatif, variable selon les options */
+.price-note {
+  margin: 6px 0 0;
+  color: var(--text-soft);
+  font-size: 0.87rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
 /* ── Points inclus ── */
 .price-features {
   list-style: none;

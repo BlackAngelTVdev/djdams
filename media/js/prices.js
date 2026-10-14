@@ -202,6 +202,10 @@ function renderCard(item) {
 
   card.appendChild(buildPriceLine(item));
 
+  if (hasText(item.priceNote)) {
+    card.appendChild(el('p', 'price-note', String(item.priceNote)));
+  }
+
   if (hasText(item.description)) {
     card.appendChild(el('p', 'price-description', item.description));
   }
@@ -241,7 +245,11 @@ function renderRow(item) {
   if (cta) info.appendChild(cta);
 
   row.appendChild(info);
-  row.appendChild(el('div', 'price-row-price', null)).appendChild(buildPriceLine(item));
+  const priceBox = row.appendChild(el('div', 'price-row-price', null));
+  priceBox.appendChild(buildPriceLine(item));
+  if (hasText(item.priceNote)) {
+    priceBox.appendChild(el('p', 'price-note', String(item.priceNote)));
+  }
 
   return row;
 }
