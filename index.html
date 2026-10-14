@@ -14,10 +14,10 @@
 <body>
   <header>
     <div class="containerh">
-      <div class="logo">
-        <img src="./media/img/logo.png" alt="Logo">
+      <a class="logo" href="./index.html">
+        <img src="./media/img/logo.png" alt="Logo DJ Dam's">
         <h1>DJ Dam's</h1>
-      </div>
+      </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
         <span></span>
         <span></span>
@@ -26,9 +26,10 @@
       <nav id="main-nav">
         <a href="#about" class="scroll-link">À propos</a>
         <a href="#services" class="scroll-link">Services</a>
-        <a href="#gallery" class="scroll-link">Medias</a>
+        <a href="#tarifs" class="scroll-link">Tarifs</a>
+        <a href="#gallery" class="scroll-link">Médias</a>
         <a href="#reviews" class="scroll-link">Avis</a>
-        <a href="#contact" class="scroll-link">Contact</a>
+        <a href="./pages/contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -41,7 +42,7 @@
         <p class="hero-subtitle">DJ local, contact direct, ambiance sur mesure: une expérience simple, claire et efficace pour ton événement.</p>
         
         <div class="hero-actions">
-          <a href="#contact" class="scroll-link btn">Réserve ta date</a>
+          <a href="./pages/contact.html" class="btn">Réserve ta date</a>
           <a href="#services" class="scroll-link btn btn-ghost">Voir les prestations</a>
         </div>
       </div>
@@ -59,7 +60,7 @@
         <p>Je ne vends pas juste une playlist : je prépare, j'écoute vos envies, et je fais en sorte que tout soit fluide
           du début à la fin. Mon but est simple : <b>que vous passiez une vraie bonne soirée</b>.</p>
         <p>Si tu veux une ambiance sérieuse, sans prise de tête, on en parle et je m'occupe du son.</p>
-        <a href="#contact" class="scroll-link teaser-cta">Contacte-moi -></a>
+        <a href="./pages/contact.html" class="teaser-cta">Contacte-moi -></a>
       </div>
       
       <img src="./media/img/logo.png" alt="moi">
@@ -98,6 +99,21 @@
       </div>
     </section>
 
+    <section id="tarifs" class="section home-pricing" data-aos="fade-up">
+      <div class="container">
+        <h3>Tarifs</h3>
+        <p class="home-pricing-intro">Nos formules en CHF, matériel et installation compris. Clique sur une carte pour
+          voir le détail.</p>
+
+        <div id="home-pricing-root" class="home-pricing-grid" aria-live="polite">
+          <p class="prices-loading">Chargement des tarifs…</p>
+        </div>
+
+        <div class="home-pricing-actions">
+          <a href="./pages/tarifs.html" class="btn">Voir tous les tarifs</a>
+        </div>
+      </div>
+    </section>
 
     <section class="gallery-section container" id="gallery" data-aos="fade-up">
       <h3>Médiathèques</h3>
@@ -125,61 +141,6 @@
     </section>
 
 
-
-    <section id="contact" class="section" data-aos="fade-up">
-      <div class="container">
-        <h3>Contact</h3>
-
-        <form id="contact-form" action="https://formsubmit.co/dj.dams08@gmail.com" method="POST">
-          <div class="form-group">
-            <label for="name">Nom complet *</label>
-            <input type="text" name="name" id="name" required placeholder="Ton nom complet">
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" name="email" required placeholder="Email">
-          </div>
-
-          <div class="form-group" style="position:relative;">
-            <label for="event-date">Date de l'événement *</label>
-            <input type="hidden" name="event_date" id="event-date" required>
-            <div id="date-display" class="date-display" role="button" tabindex="0" aria-label="Choisir une date">Choisir une date</div>
-            <div id="calendar-popup" class="calendar-popup">
-              <div class="cal-header">
-                <button type="button" id="cal-prev">◀</button>
-                <span id="calendar-month-year"></span>
-                <button type="button" id="cal-next">▶</button>
-              </div>
-              <div id="calendar-days" class="cal-grid"></div>
-              <div class="cal-legend">
-                <span><span class="dot free"></span> Libre</span>
-                <span><span class="dot busy-dot"></span> Occupé</span>
-                <span><span class="dot reserved-dot"></span> Réservé</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="location">Lieu de l'événement *</label>
-            <input type="text" name="location" id="location" required placeholder="Lieu de l'événement">
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea name="message" id="message" required
-              placeholder="Détails de l'événement. (ex : Mariage, environ 100 personnes)"></textarea>
-          </div>
-          <!-- <input type="hidden" name="_autoresponse" value="your custom message"> -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://dj-dams.vercel.app/pages/merci.html">
-
-          <button type="submit">Envoyer</button>
-        </form>
-
-
-      </div>
-    </section>
 
   </main>
   <!------------------ Cookie ------------------>
@@ -249,12 +210,13 @@
           <h4>Navigation</h4>
           <a href="#about" class="scroll-link">À propos</a>
           <a href="#services" class="scroll-link">Services</a>
+          <a href="./pages/tarifs.html">Tarifs</a>
           <a href="#gallery" class="scroll-link">Médias</a>
         </div>
 
         <div class="footer-column">
           <h4>Contact</h4>
-          <a href="#contact" class="scroll-link">Réserver une date</a>
+          <a href="./pages/contact.html">Réserver une date</a>
           <a href="#reviews" class="scroll-link">Avis clients</a>
           <a href="mailto:dj.dams08@gmail.com">dj.dams08@gmail.com</a>
         </div>
@@ -275,6 +237,7 @@
   <script src="./media/js/reviews.js"></script>
   <script src="./media/js/cookie.js"></script>
   <script src="./media/js/calendar.js"></script>
+  <script src="./media/js/prices.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
