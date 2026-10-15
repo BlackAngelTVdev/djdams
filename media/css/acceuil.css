@@ -215,13 +215,16 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
-.btn-ghost {
+/* Spécificité .btn.btn-ghost : doit battre la règle .btn (dégradé) placée plus bas */
+.btn.btn-ghost,
+button.btn-ghost {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.26);
   box-shadow: none;
 }
 
-.btn-ghost:hover {
+.btn.btn-ghost:hover,
+button.btn-ghost:hover {
   background: transparent;
   border-color: rgba(255, 255, 255, 0.55);
 }

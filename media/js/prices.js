@@ -469,10 +469,17 @@ function renderCta(cta) {
   if (hasText(cta.text)) section.appendChild(el('p', null, cta.text));
 
   const button = buildCta(cta.button, 'prices-cta-btn');
-  if (button) section.appendChild(button);
-
   const actions = buildActions(cta.actions);
-  if (actions) section.appendChild(actions);
+
+  // Bouton principal et actions secondaires partagent la même rangée centrée
+  if (button && actions) {
+    actions.insertBefore(button, actions.firstChild);
+    section.appendChild(actions);
+  } else if (button) {
+    section.appendChild(button);
+  } else if (actions) {
+    section.appendChild(actions);
+  }
 
   return section.children.length > 0 ? section : null;
 }
