@@ -527,6 +527,13 @@ function renderPrices(data) {
 
   rendered.forEach((entry) => pricesRoot.appendChild(entry.section));
 
+  // « Tarifs mis à jour le … » : affiché sous les cartes de prix, plus dans le hero
+  if (pricesUpdated && hasText(pricesUpdated.textContent)) {
+    const updatedWrap = el('div', 'prices-updated-wrap');
+    updatedWrap.appendChild(pricesUpdated);
+    pricesRoot.appendChild(updatedWrap);
+  }
+
   // Ordre : prix -> tableau comparatif -> questions -> modalités -> action
   const comparison = renderComparison(data.comparison, collectItems(data));
   if (comparison) pricesRoot.appendChild(comparison);

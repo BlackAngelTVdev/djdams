@@ -48,6 +48,16 @@
   display: none;
 }
 
+/* Mention « mis à jour » : déplacée sous la grille de prix */
+.prices-updated-wrap {
+  text-align: center;
+  margin: -34px 0 14px;
+}
+
+.prices-updated-wrap .prices-updated {
+  margin-top: 0;
+}
+
 /* ── Conteneur ── */
 .prices-wrap {
   width: min(1120px, 92%);
