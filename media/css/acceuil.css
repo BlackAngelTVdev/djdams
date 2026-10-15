@@ -204,7 +204,7 @@ nav a:hover {
 
 .teaser-cta:hover {
   color: #efc3ff;
-  text-shadow: 0 0 14px rgba(216, 139, 255, 0.35);
+  text-shadow: none;
 }
 
 .hero-actions {
