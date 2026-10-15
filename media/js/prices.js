@@ -47,7 +47,7 @@ function collectItems(data) {
   return items;
 }
 
-// ── Bloc prix : "150 CHF / la prestation" (ou "Sur devis") ──
+// ── Bloc prix : "250 CHF / la prestation" (ou "Sur devis") ──
 function buildPriceLine(item) {
   const line = el('div', 'price-line');
   const numeric = hasText(item.price) && isNumericPrice(item.price);
@@ -323,8 +323,10 @@ function renderPills(categories) {
 }
 
 // ── Tableau comparatif : ✓ / ✗ / valeur texte par forfait ──
-function buildComparisonCell(value) {
+function buildComparisonCell(value, planName) {
   const td = document.createElement('td');
+  // Nom du forfait affiché en étiquette quand le tableau passe en pile (mobile)
+  if (hasText(planName)) td.setAttribute('data-plan', String(planName));
 
   if (value === true) {
     td.className = 'cmp-yes';
@@ -338,7 +340,16 @@ function buildComparisonCell(value) {
     td.appendChild(mark);
   } else if (hasText(value)) {
     td.className = 'cmp-text';
-    td.textContent = String(value);
+    const text = String(value).trim();
+
+    // "En option" affiché en badge plutôt qu'en texte brut
+    if (/^en option$/i.test(text)) {
+      const chip = el('span', 'cmp-chip cmp-chip--option', 'En option');
+      chip.setAttribute('aria-label', 'En option');
+      td.appendChild(chip);
+    } else {
+      td.textContent = text;
+    }
   } else {
     td.className = 'cmp-empty';
   }
@@ -389,7 +400,10 @@ function renderComparison(comparison, items) {
     tr.appendChild(el('td', 'cmp-feature-label', row.label));
 
     items.forEach((item, index) => {
-      tr.appendChild(buildComparisonCell(Array.isArray(row.values) ? row.values[index] : undefined));
+      tr.appendChild(buildComparisonCell(
+        Array.isArray(row.values) ? row.values[index] : undefined,
+        hasText(item.name) ? item.name : 'Forfait ' + (index + 1)
+      ));
     });
 
     tbody.appendChild(tr);
@@ -398,6 +412,11 @@ function renderComparison(comparison, items) {
   table.appendChild(tbody);
   scroller.appendChild(table);
   section.appendChild(scroller);
+
+  // Note discrète sous le tableau (ex. politique de déplacement kilométrique)
+  if (hasText(comparison.footnote)) {
+    section.appendChild(el('p', 'cmp-footnote', String(comparison.footnote)));
+  }
 
   return section;
 }

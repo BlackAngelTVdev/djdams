@@ -44,7 +44,7 @@ C'est le seul fichier à modifier pour changer les prix, les forfaits, la FAQ…
 "categories": [{
   "items": [{
     "name":  "Anniversaires & petits événements",
-    "price": "150",
+    "price": "250",
     "currency": "CHF",
     "unit": "la prestation",
     "pricePrefix": "dès",        // affiché en tout petit devant le montant

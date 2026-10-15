@@ -431,6 +431,33 @@
   line-height: 1.6;
 }
 
+/* Badge "En option" dans le tableau comparatif */
+.cmp-chip {
+  display: inline-block;
+  padding: 3px 11px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.cmp-chip--option {
+  border: 1px dashed rgba(196, 59, 226, 0.55);
+  background: rgba(140, 25, 152, 0.14);
+  color: #e6c9f2;
+}
+
+.cmp-footnote {
+  max-width: 760px;
+  margin: 14px auto 0;
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
 .cmp-scroll {
   overflow-x: auto;
   border: 1px solid var(--line);
@@ -446,9 +473,9 @@
 
 .cmp-table {
   width: 100%;
-  min-width: 660px;
   border-collapse: collapse;
   font-size: 0.95rem;
+  table-layout: fixed;
 }
 
 .cmp-table th,
@@ -470,7 +497,12 @@
   text-align: left !important;
   font-weight: 600;
   color: var(--text-soft);
-  white-space: nowrap;
+  overflow-wrap: break-word;
+}
+
+.cmp-feature-label,
+.cmp-feature-col {
+  width: 24%;
 }
 
 .cmp-plan-name {
@@ -512,7 +544,9 @@
 .cmp-text {
   color: #e6ebf3;
   font-weight: 600;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .cmp-empty {
@@ -683,6 +717,78 @@
 
   .price-card-head {
     min-height: 0;
+  }
+
+  /* ── Tableau comparatif en pile : plus aucun scroll horizontal ── */
+  .cmp-scroll {
+    overflow-x: visible;
+    border: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .cmp-table,
+  .cmp-table tbody,
+  .cmp-table tr,
+  .cmp-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .cmp-table thead {
+    display: none;
+  }
+
+  .cmp-table tbody tr {
+    margin-bottom: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .cmp-table tbody tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .cmp-table td {
+    height: auto;
+    border-bottom: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .cmp-table .cmp-feature-label {
+    width: auto;
+    margin-bottom: 10px;
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .cmp-table td[data-plan] {
+    margin-top: 8px;
+    padding: 7px 0 7px 12px;
+    border-left: 2px solid rgba(196, 59, 226, 0.45);
+  }
+
+  .cmp-table td[data-plan]::before {
+    content: attr(data-plan);
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+  }
+
+  .cmp-table td[data-plan] .cmp-chip {
+    display: inline-block;
+  }
+
+  .cmp-table tbody tr:hover td {
+    background: transparent;
   }
 }
 
