@@ -23,13 +23,11 @@
           "currency": "CHF",
           "unit": "la prestation",
           "pricePrefix": "dès",
-          "duration": "3 h de mix effectif (montage/démontage offert)",
           "imageAlt": "Petite soirée à petit budget animée par DJ Dam's",
           "description": "La formule d'entrée pour les petits budgets : l'essentiel du son et des lumières pour lancer la soirée.",
           "features": [
             "Son sans caisson de basse",
-            "5 effets de lumière",
-            "Déplacement en option"
+            "4 effets de lumière"
           ],
           "cta": {
             "label": "Réserver",
@@ -37,57 +35,48 @@
           }
         },
         {
-          "name": "Anniversaires & petits événements",
+          "name": "Anniversaires",
           "price": "250",
           "currency": "CHF",
           "unit": "la prestation",
           "pricePrefix": "dès",
-          "duration": "4 h de mix effectif (+ montage/démontage offert)",
           "imageAlt": "Petite soirée animée par DJ Dam's",
           "description": "Anniversaire ou réception en petit comité : la formule adaptée aux événements à taille humaine.",
           "features": [
             "Son standard (sans caisson)",
-            "7 effets de lumière",
-            "Déplacement inclus"
-          ],
+            "7 effets de lumière"          ],
           "cta": {
             "label": "Réserver",
             "href": "./contact.html"
           }
         },
         {
-          "name": "Gros projets",
+          "name": "Bal",
           "price": "500",
           "currency": "CHF",
           "unit": "la prestation",
           "pricePrefix": "dès",
-          "duration": "6 h de mix effectif (+ montage/démontage offert)",
           "imageAlt": "Grande soirée avec DJ Dam's",
           "description": "Pour les soirées plus longues et plus fournies : durée de mix étendue et volume sonore adapté à la salle.",
           "features": [
             "2 caissons de basse",
-            "12 effets de lumière",
-            "Déplacement inclus"
-          ],
+            "12 effets de lumière"          ],
           "cta": {
             "label": "Réserver",
             "href": "./contact.html"
           }
         },
         {
-          "name": "Très gros événements",
+          "name": "Big événements",
           "price": "800",
           "currency": "CHF",
           "unit": "la prestation",
           "pricePrefix": "dès",
-          "duration": "8 h de mix effectif (+ montage/démontage offert)",
           "imageAlt": "Gros événement équipé par DJ Dam's",
           "description": "La prestation complète avec l'ensemble du matériel son et lumière pour les grands espaces.",
           "features": [
             "3 caissons de basse",
-            "18 effets + show dynamique",
-            "Déplacement inclus"
-          ],
+            "18 effets + show dynamique"          ],
           "cta": {
             "label": "Demander un devis",
             "href": "./contact.html"
@@ -100,20 +89,18 @@
   "comparison": {
     "title": "Ce que comprend chaque forfait",
     "text": "Le détail des prestations, forfait par forfait : le ✓ signale un élément compris, le ✗ un élément non compris, et le texte donne la précision. La puissance lumineuse s'adapte à la taille de la salle.",
-    "footnote": "Le déplacement est inclus dans les forfaits 250, 500 et 800 CHF, et en option pour le forfait 150 CHF.",
     "rows": [
       { "label": "Installation & démontage", "values": [true, true, true, true] },
       { "label": "Micro sans fil pour annonces", "values": [true, true, true, true] },
       { "label": "Playlist sur-mesure préparée avec vous", "values": [true, true, true, true] },
       { "label": "Son", "values": ["Sans caisson (enceintes de base)", "Son standard (sans caisson)", "Système puissant (2 caissons de basse)", "Gros système (3 caissons de basse)"] },
-      { "label": "Éclairages", "values": ["5 effets de lumière", "7 effets de lumière", "12 effets de lumière", "18 effets + show dynamique"] },
-      { "label": "Durée de mix effectif (Montage/Démontage offert)", "values": ["Jusqu'à 3 heures", "Jusqu'à 4 heures", "Jusqu'à 6 heures", "Jusqu'à 8 heures"] },
-      { "label": "Animations & jeux avec les invités", "values": ["En option", "En option", "En option", "Inclus"] },
-      { "label": "Effets spéciaux (fumée / brouillard)", "values": ["En option", "En option", "Inclus", "Inclus"] },
-      { "label": "Changement de dernière seconde", "values": ["Sur demande", "Sur demande", "Dans la limite du possible", "Illimité / Adaptatif"] },
-      { "label": "Capacité conseillée", "values": ["Jusqu'à ~30 pers.", "Jusqu'à ~50 pers.", "Jusqu'à ~200 pers.", "250 personnes et +"] },
-      { "label": "Déplacement", "values": ["En option", true, true, true] },
-      { "label": "Délai minimum de réservation", "values": ["7 jours", "14 jours", "30 jours", "45 jours"] }
+      { "label": "Éclairages", "values": ["4 effets de lumière", "7 effets de lumière", "12 effets de lumière", "18 effets + show dynamique"] },
+      { "label": "Animations & jeux avec les invités", "values": ["En option", "En option", "En option", true] },
+      { "label": "Effets spéciaux (fumée / brouillard)", "values": ["En option", "En option", true, true] },
+      { "label": "Changement de dernière seconde", "values": [false, false, "Dans la limite du possible", true] },
+      { "label": "Capacité conseillée", "values": ["~30 pers.", "~50 pers.", "~200 pers.", "250 pers et +"] },
+      { "label": "Déplacement", "values": [true, true, true, true] },
+      { "label": "Délai minimum de réservation", "values": ["14 jours", "14 jours", "30 jours", "45 jours"] }
     ]
   },
 
@@ -163,7 +150,7 @@
     },
     {
       "question": "Mon événement est éloigné, est-ce possible ?",
-      "answer": "Oui, quel que soit le forfait : la distance n'est jamais bloquante. Le déplacement est inclus dans les forfaits 250, 500 et 800 CHF, et en option pour le forfait 150 CHF."
+      "answer": "Oui, quel que soit le forfait : la distance n'est jamais bloquante, le déplacement est compris dans la prestation."
     },
     {
       "question": "Quel nombre de personnes pouvez-vous gérer ?",
