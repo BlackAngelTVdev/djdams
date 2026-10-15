@@ -107,7 +107,7 @@
   "notes": [
     "Prévoyez un peu d'avance : le délai minimum par forfait est précisé dans le tableau comparatif.",
     "Montage et démontage offerts : seules les heures de mix effectif sont comptées dans la durée du forfait.",
-    "Acompte à la réservation, solde le jour même.",
+    "Aucun acompte à la réservation : le règlement se fait le jour même de la prestation.",
     "Le devis se demande depuis la page Contact : gratuit et sans engagement."
   ],
 
@@ -134,7 +134,7 @@
     },
     {
       "question": "Comment se passe le paiement ?",
-      "answer": "Un acompte confirme la réservation, le solde intervient le jour même. Le montant exact figure sur le devis."
+      "answer": "Aucun acompte : rien à payer avant l'événement. Vous réglez le jour même de la prestation, après le mix, et le montant exact figure sur le devis."
     },
     {
       "question": "Quels styles de musique mixez-vous ?",
