@@ -196,12 +196,10 @@ function renderCard(item) {
   const media = buildCardMedia(item);
   if (media) card.appendChild(media);
 
-  if (hasText(item.badge)) {
-    card.appendChild(buildBadge(item.badge));
-  }
-
   const head = el('div', 'price-card-head');
   if (hasText(item.name)) head.appendChild(el('h4', 'price-name', item.name));
+  // Badge sous le titre (et non au-dessus)
+  if (hasText(item.badge)) head.appendChild(buildBadge(item.badge));
   if (hasText(item.duration)) head.appendChild(el('p', 'price-duration', item.duration));
   card.appendChild(head);
 

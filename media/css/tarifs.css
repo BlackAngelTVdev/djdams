@@ -89,8 +89,9 @@
 }
 
 .prices-pill:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.14);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.32);
+  color: #ffffff;
 }
 
 .prices-pill.is-active {
@@ -186,6 +187,12 @@
   letter-spacing: 0.02em;
   color: #fff;
   background: linear-gradient(110deg, var(--brand), var(--brand-2));
+}
+
+/* Badge de carte : posé sous le titre, dans le bloc d'en-tête */
+.price-card-head .price-badge {
+  display: inline-block;
+  margin-top: 8px;
 }
 
 .price-card-head {

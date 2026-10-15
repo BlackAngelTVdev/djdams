@@ -134,7 +134,8 @@ nav {
 .menu-toggle:hover {
   transform: none;
   filter: none;
-  background: rgba(255, 255, 255, 0.12);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 body.nav-open {
@@ -153,8 +154,9 @@ nav a {
 }
 
 nav a:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.14);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.32);
+  color: #ffffff;
 }
 
 
@@ -220,8 +222,8 @@ nav a:hover {
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.55);
 }
 
 .hero-points {
@@ -265,8 +267,9 @@ button {
 
 .btn:hover,
 button:hover {
-  transform: translateY(-1px) scale(1.01);
-  filter: saturate(1.05);
+  transform: none;
+  filter: none;
+  opacity: 0.88;
 }
 
 .section,
@@ -469,10 +472,7 @@ button:hover {
   font-size: clamp(2.1rem, 4vw, 2.6rem);
   font-weight: 800;
   line-height: 1;
-  background: linear-gradient(110deg, #ffffff, #e9c6ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #ffffff;
 }
 
 .price-amount .price-currency {
@@ -768,9 +768,9 @@ footer {
 }
 
 .social-link:hover {
-  transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
+  transform: none;
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .social-icon {
@@ -981,7 +981,8 @@ footer {
 }
 
 .cal-header button:hover {
-  background: rgba(255,255,255,0.16);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .cal-header span {
