@@ -193,6 +193,7 @@ nav a:hover {
 .teaser-cta {
   margin-top: 12px;
   display: inline-block;
+  padding: 5px 0; /* cible tactile >= 32px */
   color: #d88bff;
   font-weight: 800;
   text-decoration: underline;
@@ -615,6 +616,11 @@ button:hover {
   display: block;
 }
 
+.contact-alt a {
+  display: inline-block;
+  padding: 6px 0; /* mailto cliquable plus large en mobile */
+}
+
 #contact .container {
   width: 100%;
 }
@@ -726,7 +732,7 @@ footer {
 
 .footer-column a {
   display: block;
-  margin: 0 0 9px;
+  padding: 6px 0; /* cible tactile >= 32px (mobile) */
   color: #c5ceda;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -734,7 +740,7 @@ footer {
 
 .footer-cookie-btn {
   margin-top: 2px;
-  padding: 0;
+  padding: 6px 0;
   background: transparent;
   border: 0;
   box-shadow: none;
