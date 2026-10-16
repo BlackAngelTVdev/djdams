@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DJ Dam's - Piste introuvable (404)</title>
+  <meta name="robots" content="noindex">
+  <link rel="shortcut icon" href="/media/img/logo.png" type="png">
+  <link rel="stylesheet" href="/media/css/acceuil.css">
+  <style>
+    /* ── 404 DJ : vinyle + égaliseur ── */
+    .nf-main {
+      min-height: calc(100vh - var(--header-height));
+      display: grid;
+      place-items: center;
+      padding: clamp(30px, 6vw, 70px) 20px;
+      text-align: center;
+    }
+
+    .nf-stage {
+      display: grid;
+      justify-items: center;
+      gap: 8px;
+      max-width: 640px;
+    }
+
+    /* Vinyle qui tourne */
+    .nf-vinyl {
+      position: relative;
+      width: clamp(150px, 30vw, 210px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background:
+        repeating-radial-gradient(circle at center,
+          #0c0e12 0 3px,
+          #14171d 3px 5px,
+          #0c0e12 5px 8px),
+        #0c0e12;
+      box-shadow:
+        0 18px 44px rgba(0, 0, 0, 0.55),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.06);
+      animation: nf-spin 3.5s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .nf-vinyl,
+      .nf-eq span {
+        animation: none !important;
+      }
+    }
+
+    .nf-vinyl::before {
+      content: "";
+      position: absolute;
+      inset: 34%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      box-shadow: 0 0 18px rgba(196, 59, 226, 0.55);
+    }
+
+    .nf-vinyl::after {
+      content: "";
+      position: absolute;
+      inset: 47.5%;
+      border-radius: 50%;
+      background: #0b0d11;
+    }
+
+    /* Reflet lumineux sur le disque */
+    .nf-gloss {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(115deg,
+          transparent 42%,
+          rgba(255, 255, 255, 0.10) 47%,
+          rgba(255, 255, 255, 0.16) 50%,
+          rgba(255, 255, 255, 0.10) 53%,
+          transparent 58%);
+      pointer-events: none;
+    }
+
+    @keyframes nf-spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Égaliseur sous le vinyle */
+    .nf-eq {
+      display: flex;
+      align-items: flex-end;
+      gap: 5px;
+      height: 34px;
+      margin: 10px 0 6px;
+    }
+
+    .nf-eq span {
+      width: 6px;
+      border-radius: 3px;
+      background: linear-gradient(180deg, var(--brand-2), var(--brand));
+      animation: nf-bounce 1s ease-in-out infinite;
+    }
+
+    .nf-eq span:nth-child(1) { height: 40%; animation-delay: 0s; }
+    .nf-eq span:nth-child(2) { height: 85%; animation-delay: .15s; }
+    .nf-eq span:nth-child(3) { height: 55%; animation-delay: .3s; }
+    .nf-eq span:nth-child(4) { height: 100%; animation-delay: .45s; }
+    .nf-eq span:nth-child(5) { height: 65%; animation-delay: .6s; }
+    .nf-eq span:nth-child(6) { height: 30%; animation-delay: .75s; }
+    .nf-eq span:nth-child(7) { height: 75%; animation-delay: .9s; }
+
+    @keyframes nf-bounce {
+
+      0%,
+      100% {
+        transform: scaleY(0.45);
+      }
+
+      50% {
+        transform: scaleY(1);
+      }
+    }
+
+    .nf-code {
+      margin: 14px 0 0;
+      font-size: clamp(3.4rem, 12vw, 5.6rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0.06em;
+      background: linear-gradient(120deg, #fff 20%, #d88bff 55%, var(--brand-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 10px 30px rgba(140, 25, 152, 0.25);
+    }
+
+    .nf-title {
+      margin: 6px 0 10px;
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+    }
+
+    .nf-text {
+      max-width: 480px;
+      margin: 0 auto 26px;
+      color: var(--text-soft);
+      line-height: 1.65;
+    }
+
+    .nf-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nf-actions .btn {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    /* Lien du morceau perdu */
+    .nf-lost {
+      margin: 26px 0 0;
+      font-size: 0.88rem;
+      color: #98a2b3;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="containerh">
+      <a class="logo" href="/index.html">
+        <img src="/media/img/logo.png" alt="Logo DJ Dam's">
+        <h1>DJ Dam's</h1>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="main-nav">
+        <a href="/index.html#about">À propos</a>
+        <a href="/index.html#services">Services</a>
+        <a href="/pages/tarifs">Tarifs</a>
+        <a href="/index.html#gallery">Médias</a>
+        <a href="/index.html#reviews">Avis</a>
+        <a href="/pages/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="nf-main">
+    <div class="nf-stage">
+      <div class="nf-vinyl" aria-hidden="true">
+        <span class="nf-gloss"></span>
+      </div>
+
+      <div class="nf-eq" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+
+      <p class="nf-code">404</p>
+      <h2 class="nf-title">Piste introuvable</h2>
+      <p class="nf-text">Ce morceau n'existe pas (ou il a été déprogrammé du set).
+        Le son, lui, continue : rejoignez-moi sur une page qui existe.</p>
+
+      <div class="nf-actions">
+        <a class="btn" href="/index.html">Retour à l'accueil</a>
+        <a class="btn btn-ghost" href="/pages/tarifs">Voir les tarifs</a>
+      </div>
+
+      <p class="nf-lost">Erreur attrapée en plein mix — la platine n'est pas en cause. 🎧</p>
+    </div>
+  </main>
+
+  <script src="/media/js/scroll.js"></script>
+</body>
+
+</html>
