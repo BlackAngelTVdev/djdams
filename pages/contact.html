@@ -29,6 +29,18 @@
       color: #d88bff;
       font-weight: 700;
     }
+
+    /* Message confirmant qu'un forfait a été présélectionné depuis les tarifs */
+    .forfait-hint {
+      margin: 6px 0 0;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #d88bff;
+    }
+
+    .forfait-hint[hidden] {
+      display: none;
+    }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3938320450612017" crossorigin="anonymous"></script>
 </head>
@@ -91,6 +103,18 @@
                 <span><span class="dot reserved-dot"></span> Réservé</span>
               </div>
             </div>
+          </div>
+
+          <div class="form-group">
+            <label for="forfait">Forfait souhaité</label>
+            <select name="forfait" id="forfait">
+              <option value="">Je ne sais pas encore / À définir ensemble</option>
+              <option value="Essentiel">Essentiel — dès 150 CHF</option>
+              <option value="Anniversaires">Anniversaires — dès 250 CHF</option>
+              <option value="Bal">Bal — dès 500 CHF</option>
+              <option value="Big événements">Big événements — dès 800 CHF</option>
+            </select>
+            <p class="forfait-hint" id="forfait-hint" hidden></p>
           </div>
 
           <div class="form-group">
@@ -207,6 +231,32 @@
   <script src="../media/js/scroll.js"></script>
   <script src="../media/js/cookie.js"></script>
   <script src="../media/js/calendar.js"></script>
+  <script>
+    // Forfait présélectionné via contact.html?forfait=bal (depuis la page Tarifs)
+    (() => {
+      const select = document.getElementById('forfait');
+      const hint = document.getElementById('forfait-hint');
+      if (!select) return;
+
+      const slug = new URLSearchParams(window.location.search).get('forfait');
+      if (!slug) return;
+
+      const normalize = (value) => String(value)
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase().trim().replace(/\s+/g, '-');
+
+      const option = Array.from(select.options)
+        .find((opt) => opt.value && normalize(opt.value) === normalize(slug));
+
+      if (option) {
+        select.value = option.value;
+        if (hint) {
+          hint.textContent = 'Forfait « ' + option.value + ' » présélectionné — modifiable si besoin.';
+          hint.hidden = false;
+        }
+      }
+    })();
+  </script>
 </body>
 
 </html>

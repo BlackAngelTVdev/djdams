@@ -31,7 +31,7 @@
           ],
           "cta": {
             "label": "Réserver",
-            "href": "./contact.html"
+            "href": "./contact.html?forfait=essentiel"
           }
         },
         {
@@ -47,11 +47,13 @@
             "7 effets de lumière"          ],
           "cta": {
             "label": "Réserver",
-            "href": "./contact.html"
+            "href": "./contact.html?forfait=anniversaires"
           }
         },
         {
           "name": "Bal",
+          "featured": true,
+          "badge": "\u2605 Le plus populaire",
           "price": "500",
           "currency": "CHF",
           "unit": "la prestation",
@@ -63,7 +65,7 @@
             "12 effets de lumière"          ],
           "cta": {
             "label": "Réserver",
-            "href": "./contact.html"
+            "href": "./contact.html?forfait=bal"
           }
         },
         {
@@ -79,7 +81,7 @@
             "18 effets + show dynamique"          ],
           "cta": {
             "label": "Demander un devis",
-            "href": "./contact.html"
+            "href": "./contact.html?forfait=big-evenements"
           }
         }
       ]
@@ -101,11 +103,12 @@
       { "label": "Capacité conseillée", "values": ["~30 pers.", "~50 pers.", "~200 pers.", "250 pers et +"] },
       { "label": "Déplacement", "values": [true, true, true, true] },
       { "label": "Délai minimum de réservation", "values": ["14 jours", "14 jours", "30 jours", "45 jours"] }
-    ]
+    ],
+    "footnote": "Ces délais sont un repère de préparation, pas une porte fermée : en cas d'urgence ou de dernière minute, écrivez-moi quand même depuis la page Contact — si la date est libre, c'est tout à fait possible."
   },
 
   "notes": [
-    "Prévoyez un peu d'avance : le délai minimum par forfait est précisé dans le tableau comparatif.",
+    "Prévoyez un peu d'avance : le délai minimum par forfait est précisé dans le tableau comparatif — mais une demande de dernière minute reste toujours possible, contactez-moi pour vérifier la disponibilité.",
     "Montage et démontage offerts : seules les heures de mix effectif sont comptées dans la durée du forfait.",
     "Aucun acompte à la réservation : le règlement se fait le jour même de la prestation.",
     "Le devis se demande depuis la page Contact : gratuit et sans engagement."
