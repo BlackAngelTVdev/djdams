@@ -1,6 +1,7 @@
 let allGalleryItems = [];
 let currentIndex = 0;
 const batchSize = 9;
+const ROOT_URL = window.location.origin;
 let currentFilter = 'all';
 
 const loadMoreBtn = document.getElementById('load-more-btn');
@@ -42,13 +43,16 @@ window.addEventListener('scroll', () => {
 function createElement(type, src, alt) {
   if (type === 'img') {
     const img = document.createElement('img');
+    if (src.startsWith('http') && !src.startsWith(ROOT_URL)) {
+      img.crossOrigin = 'anonymous';
+    }
     img.src = src;
     img.alt = alt || '';
     img.style.cursor = 'pointer';
-    
-
-    img.setAttribute('loading', 'lazy'); 
-
+    img.setAttribute('loading', 'lazy');
+    img.setAttribute('decoding', 'async');
+    img.setAttribute('width', '400');
+    img.setAttribute('height', '260');
 
     img.addEventListener('click', () => {
       lightboxImg.src = src;

@@ -65,13 +65,17 @@
   <link rel="stylesheet" href="./media/css/acceuil.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3938320450612017" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googleapis.com" crossorigin>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script>
+  <script src="./media/js/typed-init.js" defer></script>
 </head>
 
 <body>
   <header>
     <div class="containerh">
       <a class="logo" href="./index.html">
-        <img src="./media/img/logo.png" alt="Logo DJ Dam's">
+        <img src="./media/img/logo.png" alt="Logo DJ Dam's" width="60" height="60" fetchpriority="low" decoding="async">
         <h1>DJ Dam's</h1>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
@@ -117,9 +121,7 @@
           du début à la fin. Mon but est simple : <b>que vous passiez une vraie bonne soirée</b>.</p>
         <p>Si vous recherchez une ambiance sérieuse et sans mauvaise surprise, prenez contact : je m'occupe du son.</p>
         <a href="./pages/contact.html" class="teaser-cta">Prendre contact →</a>
-      </div>
-      
-      <img src="./media/img/logo.png" alt="moi">
+      </div>        <img src="./media/img/logo.png" alt="DJ Dam's" width="360" height="360" loading="lazy" decoding="async" fetchpriority="low">
     </section>
 
 
@@ -205,7 +207,7 @@
   <div id="cookie-banner" style="display:none;">
     <div class="cookie-content">
       <div class="cookietitle">
-        <img src="https://www.freeiconspng.com/uploads/cookie-png-transparent-images-background-23.png" alt="cookie">
+        <img src="https://www.freeiconspng.com/uploads/cookie-png-transparent-images-background-23.png" alt="cookie" width="24" height="24" loading="lazy" decoding="async">
         <h2>Cookie</h2>
 
       </div>
@@ -288,29 +290,22 @@
       <p class="footer-copy">&copy; 2026 DJ Dam's. Tous droits réservés.</p>
     </div>
   </footer>
-  <script src="./media/js/scroll.js"></script>
-  <script src="./media/js/gallery.js"></script>
-  <script src="./media/js/reviews.js"></script>
-  <script src="./media/js/cookie.js"></script>
-  <script src="./media/js/calendar.js"></script>
-  <script src="./media/js/prices.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./media/js/scroll.js" defer></script>
+  <script src="./media/js/gallery.js" defer></script>
+  <script src="./media/js/reviews.js" defer></script>
+  <script src="./media/js/cookie.js" defer></script>
+  <script src="./media/js/calendar.js" defer></script>
+  <script src="./media/js/prices.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <script>
-    AOS.init({
-      duration: 800, // Vitesse de l'animation (800ms)
-      once: true    // L'animation ne se joue qu'une seule fois
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof AOS === 'undefined') return;
+      AOS.init({
+        duration: 800,
+        once: true
+      });
     });
   </script>
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-<script>
-  var typed = new Typed('#typed', {
-    strings: ['Anniversaires', 'Bals', 'Soirées Privées', 'Événements'],
-    typeSpeed: 60,
-    backDelay: 2000,
-    backSpeed: 40,
-    loop: true
-  });
-</script>
 </body>
 
 </html>

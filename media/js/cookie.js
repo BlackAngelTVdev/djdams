@@ -2,6 +2,11 @@
 
   const cookieBanner = document.getElementById('cookie-banner');
   const cookieManager = document.getElementById('cookie-manager');
+  const cookieImg = cookieBanner ? cookieBanner.querySelector('img') : null;
+  if (cookieImg) {
+    cookieImg.style.removeProperty('width');
+    cookieImg.style.removeProperty('height');
+  }
   const fixedManageBtn = document.getElementById('manage-cookies-fixed-btn');
   const footerManageBtn = document.getElementById('manage-cookies-footer-btn');
   const acceptBtn = document.getElementById('accept-cookies-btn');

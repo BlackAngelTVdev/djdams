@@ -11,6 +11,12 @@ pnpm-debug.log*
 
 # Dependencies
 node_modules/
+package-lock.json
+package.json
+media/img/gallery/tmp_*
+media/img/gallery/*.webp
+media/img/gallery/*.avif
+
 
 # Build / cache outputs
 dist/
