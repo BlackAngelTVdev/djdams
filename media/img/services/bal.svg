@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="32" cy="32" r="26" class="frame" />
+  <circle cx="32" cy="32" r="14" class="vinyl" />
+  <circle cx="32" cy="32" r="3" class="center" fill="currentColor" stroke="none" />
+  <path d="M10 20 Q20 14 30 20" class="wave" />
+  <path d="M40 22 Q50 16 54 22" class="wave" />
+  <path d="M20 44 Q28 50 36 44" class="wave" />
+  <path d="M44 46 Q52 52 54 48" class="wave" />
+</svg>
