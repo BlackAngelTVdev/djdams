@@ -113,6 +113,8 @@ function applyFilter(filter) {
   displayNextBatch();
 }
 
+filterSelect.setAttribute('aria-label', 'Filtrer la galerie : images ou vidéos/sons');
+filterSelect.setAttribute('aria-label', 'Filtrer la galerie : toutes les medias, images, ou videos/sons');
 filterSelect.addEventListener('change', (e) => {
   applyFilter(e.target.value);
 });
